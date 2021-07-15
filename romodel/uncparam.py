@@ -138,6 +138,12 @@ class _UncParamData(ComponentData, NumericValue):
         """Returns False because this is not a constant in an expression."""
         return False
 
+    def is_binary(self):
+        return False
+
+    def is_integer(self):
+        return False
+
     def _compute_polynomial_degree(self, result):
         """Returns 0 because this is a parameter object."""
         return 0
